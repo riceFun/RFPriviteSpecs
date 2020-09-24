@@ -69,8 +69,8 @@ Pod::Spec.new do |spec|
    
   # spec.dependency "UMCCommon", "~> 2.1.4"
   # spec.dependency "UMCPush", '~> 3.2.4'
-  # spec.dependency "IKEventSource", "~> 3.0.0"
-   spec.dependency "WebViewJavascriptBridge", "~>6.0.0"
+   spec.dependency "IKEventSource", "~> 3.0.0"
+  # spec.dependency "WebViewJavascriptBridge", "~> 6.0.0"
   # spec.dependency "TXLiteAVSDK_TRTC", "~> 7.7.9458"
    
   # spec.dependency "UMCCommon", :http => "https://umplus-sdk-download.oss-cn-shanghai.aliyuncs.com/iOS/UMCommon/UMCommon_7.1.3.zip"

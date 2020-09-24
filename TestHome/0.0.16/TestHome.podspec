@@ -69,7 +69,7 @@ Pod::Spec.new do |spec|
    
   # spec.dependency "UMCCommon", "~> 2.1.4"
   # spec.dependency "UMCPush", '~> 3.2.4'
-   spec.dependency "IKEventSource", "~> 3.0.0"
+   spec.dependency 'IKEventSource', '~> 3.0.0'
   # spec.dependency "WebViewJavascriptBridge", "~> 6.0.0"
   # spec.dependency "TXLiteAVSDK_TRTC", "~> 7.7.9458"
    

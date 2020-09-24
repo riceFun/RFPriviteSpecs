@@ -29,6 +29,8 @@ Pod::Spec.new do |spec|
   
   # 这个非常重要
   spec.vendored_frameworks = "TestHome.framework"
+  # 指定swift版本
+  spec.swift_version = "5.0"
 
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"

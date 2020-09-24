@@ -8,16 +8,72 @@
 
 Pod::Spec.new do |spec|
 
+  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #
+  #  These will help people to find your library, and whilst it
+  #  can feel like a chore to fill in it's definitely to your advantage. The
+  #  summary should be tweet-length, and the description more in depth.
+  #
+
   spec.name         = "TestHome"
   spec.version      = "0.0.20"
-  spec.summary      = "this is s.summary s.summary s.summary s.summary s.summary s.summar"
+  spec.summary      = "this is summarysummarysummarysummarysummarysummarysummarysummarysummarysummarysummary"
+
+  # This description is used to generate tags and improve search results.
+  #   * Think: What does it do? Why did you write it? What is the focus?
+  #   * Try to keep it short, snappy and to the point.
+  #   * Write the description between the DESC delimiters below.
+  #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-         this is s.description s.descriptions.descriptions.descriptions.descriptions.descriptions.descriptions.descriptions.descriptions.descriptions.descriptions.description
+  this is s.description s.descriptions.descriptions.descriptions.descriptions.descriptions.descriptions.descriptions.descriptions.descriptions.descriptions.description
                    DESC
-  spec.homepage     = "https://github.com/riceFun/TestHome"
+
+  spec.homepage     = "https://www.jianshu.com/p/a181b47f8881"
+  # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+
+
+  # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #
+  #  Licensing your code is important. See https://choosealicense.com for more info.
+  #  CocoaPods will detect a license file if there is a named LICENSE*
+  #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
+  #
+
   spec.license      = "MIT"
+  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+
+
+  # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #
+  #  Specify the authors of the library, with email addresses. Email addresses
+  #  of the authors are extracted from the SCM log. E.g. $ git log. CocoaPods also
+  #  accepts just a name if you'd rather not provide an email address.
+  #
+  #  Specify a social_media_url where others can refer to, for example a twitter
+  #  profile URL.
+  #
+
   spec.author             = { "riceFun" => "adolphbaofan@163.com" }
+  # Or just: spec.author    = "riceFun"
+  # spec.authors            = { "riceFun" => "adolphbaofan@163.com" }
+  # spec.social_media_url   = "https://twitter.com/riceFun"
+
+  # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #
+  #  If this Pod runs only on iOS or OS X, then specify the platform and
+  #  the deployment target. You can optionally include the target after the platform.
+  #
+
+  # spec.platform     = :ios
   spec.platform     = :ios, "11.0"
+
+  #  When using multiple platforms
+  # spec.ios.deployment_target = "5.0"
+  # spec.osx.deployment_target = "10.7"
+  # spec.watchos.deployment_target = "2.0"
+  # spec.tvos.deployment_target = "9.0"
+
+
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  Specify the location from where the source should be retrieved.
@@ -25,19 +81,33 @@ Pod::Spec.new do |spec|
   #
 
   spec.source       = { :git => "https://github.com/riceFun/TestHome.git", :tag => "#{spec.version}" }
-  
+
+
+  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #
+  #  CocoaPods is smart about how it includes source code. For source files
+  #  giving a folder will include any swift, h, m, mm, c & cpp files.
+  #  For header files it will include any header in the folder.
+  #  Not including the public_header_files will make all headers public.
+  #
   
   # 这个非常重要
   spec.vendored_frameworks = "TestHome.framework"
-  # 指定swift版本
   spec.swift_version = "5.0"
 
-   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  # spec.source_files  = "TestHome.framework"
-   # spec.exclude_files = "Classes/Exclude"
+  #spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
+
+  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #
+  #  A list of resources included with the Pod. These are copied into the
+  #  target bundle with a build phase script. Anything else will be cleaned.
+  #  You can preserve files from being cleaned, please don't preserve
+  #  non-essential files like tests, examples and documentation.
+  #
 
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
@@ -52,6 +122,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.framework  = "SomeFramework"
+  # spec.frameworks = "SomeFramework", "AnotherFramework"
   spec.frameworks = "Foundation", "UIKit", "WebKit"
 
   # spec.library   = "iconv"
@@ -64,25 +135,26 @@ Pod::Spec.new do |spec|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-   spec.requires_arc = true
+  spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "UMCCommon", "= 7.1.3"
-  # spec.dependency "UMCPush", "= 3.2.5"
-   
-  # spec.dependency "UMCCommon", "~> 2.1.4"
-  # spec.dependency "UMCPush", '~> 3.2.4'
-  # spec.dependency 'IKEventSource', '~> 3.0.0'
-  # spec.dependency "WebViewJavascriptBridge", "~> 6.0.0"
-  # spec.dependency "TXLiteAVSDK_TRTC", "~> 7.7.9458"
-   
-  # spec.dependency "UMCCommon", :http => "https://umplus-sdk-download.oss-cn-shanghai.aliyuncs.com/iOS/UMCommon/UMCommon_7.1.3.zip"
-   
-  #  spec.dependency "IKEventSource", "= 3.0.0"
-  # spec.dependency "TXLiteAVSDK_TRTC", ":podspec => "http://pod-1252463788.cosgz.myqcloud.com/liteavsdkspec/TXLiteAVSDK_TRTC.podspec""
-  # spec.dependency "TXLiteAVSDK_TRTC"
-   
-   
-  # spec.dependency "Alamofire", "~> 5.0"
+   spec.dependency "JSONKit", "~> 1.4"
 
+   # spec.dependency "UMCCommon", "= 7.1.3"
+   # spec.dependency "UMCPush", "= 3.2.5"
+    
+   # spec.dependency "UMCCommon", "~> 2.1.4"
+   # spec.dependency "UMCPush", '~> 3.2.4'
+   # spec.dependency 'IKEventSource', '~> 3.0.0'
+   # spec.dependency "WebViewJavascriptBridge", "~> 6.0.0"
+   # spec.dependency "TXLiteAVSDK_TRTC", "~> 7.7.9458"
+    
+   # spec.dependency "UMCCommon", :http => "https://umplus-sdk-download.oss-cn-shanghai.aliyuncs.com/iOS/UMCommon/UMCommon_7.1.3.zip"
+    
+   #  spec.dependency "IKEventSource", "= 3.0.0"
+   # spec.dependency "TXLiteAVSDK_TRTC", ":podspec => "http://pod-1252463788.cosgz.myqcloud.com/liteavsdkspec/TXLiteAVSDK_TRTC.podspec""
+   # spec.dependency "TXLiteAVSDK_TRTC"
+    
+    
+   # spec.dependency "Alamofire", "~> 5.0"
 end

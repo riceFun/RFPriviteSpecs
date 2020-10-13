@@ -80,7 +80,9 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/riceFun/KJLHomeshowFront.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/riceFun/KJLHomeshowFront.git",
+                        :tag => "#{spec.version}",
+                        :branch => "auto" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -138,5 +140,6 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
+  spec.dependency "TXLiteAVSDK_TRTC", :podspec => "http://pod-1252463788.cosgz.myqcloud.com/liteavsdkspec/TXLiteAVSDK_TRTC.podspec"
 
 end

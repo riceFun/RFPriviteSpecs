@@ -138,5 +138,14 @@ Pod::Spec.new do |spec|
   
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
+  
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+      
+  spec.dependency 'UMCCommon'
+  spec.dependency 'UMCPush'
+  spec.dependency 'IKEventSource', '= 3.0.1'
+  spec.dependency 'TXLiteAVSDK_TRTC'
+  # spec.dependency 'TXLiteAVSDK_TRTC', :podspec => 'http://pod-1252463788.cosgz.myqcloud.com/liteavsdkspec/TXLiteAVSDK_TRTC.podspec'
 
 end

@@ -143,10 +143,10 @@ Pod::Spec.new do |spec|
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
       
   # spec.dependency 'UMCCommon'
-  spec.dependency 'UMCCommon', '= 7.1.0'
-  spec.dependency 'UMCPush'
-  spec.dependency 'IKEventSource', '= 3.0.1'
-  spec.dependency 'TXLiteAVSDK_TRTC'
+    # spec.dependency 'UMCCommon', '= 7.1.0'
+    # spec.dependency 'UMCPush'
+    # spec.dependency 'IKEventSource', '= 3.0.1'
+    # spec.dependency 'TXLiteAVSDK_TRTC'
   # spec.dependency 'TXLiteAVSDK_TRTC', :podspec => 'http://pod-1252463788.cosgz.myqcloud.com/liteavsdkspec/TXLiteAVSDK_TRTC.podspec'
 
 end
